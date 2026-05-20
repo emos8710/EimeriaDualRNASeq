@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#SBATCH -p core
 #SBATCH -n 15
 #SBATCH -t 24:00:00
 #SBATCH -J trimmomatic_run
