@@ -1,16 +1,13 @@
-#!/bin/bash -l
+#!/bin/bash
 
-#SBATCH -A snic2020-15-16
 #SBATCH -p core
-#SBATCH -n 8
-#SBATCH -t 48:00:00
+#SBATCH -n 15
+#SBATCH -t 24:00:00
 #SBATCH -J trimmomatic_run
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user arnarkari.sigurearsonsandholt.9531@student.uu.se
+#SBATCH --mail-user=emma.ostlund@sva.se
 
-module load bioinfo-tools
-module load trimmomatic
+module load Java/17.0.6-hpc1-bdist
 
 # Your commands
-bash scripts/trimmomatic/trimmomatic_run.sh data/in_vitro_pilot/161012_D00457_0163_AC9TWTANXX/Sample_*
-bash scripts/trimmomatic/trimmomatic_run.sh data/in_vitro_complementary/170830_D00457_0216_ACB7DNANXX/Sample_*
+bash EimeriaDualRNASeq/scripts/trimmomatic/trimmomatic_run.sh data/*
