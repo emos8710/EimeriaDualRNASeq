@@ -1,6 +1,7 @@
 #!/bin/bash -l
 
 #SBATCH -n 8
+#SBATCH --mem=20000M
 #SBATCH -t 48:00:00
 #SBATCH -J star_run_merged
 #SBATCH --mail-type=ALL
