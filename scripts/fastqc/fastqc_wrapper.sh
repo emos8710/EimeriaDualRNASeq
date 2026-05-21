@@ -9,4 +9,4 @@
 module load Java/17.0.6-hpc1-bdist
 
 # Your commands
-software/FastQC/fastqc -t 18 -o results/fastqc/ results/trimmomatic/*/*.gz
+software/FastQC/fastqc -t 18 -o results/fastqc_fastp/ results/fastp/*/*.gz
