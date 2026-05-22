@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-#SBATCH -n 2
+#SBATCH -n 10
 #SBATCH -t 48:00:00
 #SBATCH -J htseq_run_IBV
 #SBATCH --mail-type=ALL
