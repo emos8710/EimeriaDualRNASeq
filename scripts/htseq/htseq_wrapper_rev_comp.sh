@@ -7,4 +7,4 @@
 #SBATCH --mail-user emma.ostlund@sva.se
 
 # Your commands
-bash scripts/htseq/htseq_rev_run.sh results/star/mapped_reads/Ascaridia
+bash EimeriaDualRNASeq/scripts/htseq/htseq_rev_run.sh results/star/mapped_reads/Ascaridia
