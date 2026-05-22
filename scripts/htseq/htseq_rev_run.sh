@@ -7,6 +7,6 @@ mkdir -p results/htseq/reverse/${GROUP_NAME}
 for f in $(ls ${1}/*.bam | sed 's/_Aligned.sortedByCoord.out.bam//' | sort -u)
 do
     OUTPUT_NAME=$(echo ${f} | rev | cut -d '/' -f 1 | rev)
-    htseq-count -f bam -r pos -s reverse -i ID -n 10 ${f}_Aligned.sortedByCoord.out.bam reference_genomes/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b_IBV-M41.gff \
+    htseq-count -f bam -r pos -s reverse -i ID -n 10 ${f}_Aligned.sortedByCoord.out.bam reference_genomes/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.gff \
         > results/htseq/reverse/${GROUP_NAME}/${OUTPUT_NAME}_reverse.counts
 done
