@@ -7,11 +7,11 @@ mkdir -p results/star/mapped_reads/${GROUP_NAME}
 for f in $(ls ${1}/*/*_paired.fastq.gz | sed 's/_R._paired.fastq.gz//' | sort -u)
 do
     OUTPUT_NAME=$(echo ${f} | rev | cut -d '/' -f 1 | rev)
-    software/STAR/source/STAR --genomeDir /proj/naiss2025-23-525/results/star/index_chicken --readFilesIn ${f}_R1_paired.fastq.gz ${f}_R2_paired.fastq.gz --readFilesCommand gunzip -c \
+    software/STAR/source/STAR --genomeDir /proj/naiss2025-23-525/results/star/index_chicken_IBV --readFilesIn ${f}_R1_paired.fastq.gz ${f}_R2_paired.fastq.gz --readFilesCommand gunzip -c \
 		--runThreadN 8 --outFileNamePrefix results/star/mapped_reads/${GROUP_NAME}/${OUTPUT_NAME}_ --quantMode GeneCounts --outSAMtype BAM SortedByCoordinate
-    software/STAR/source/STAR --genomeDir /proj/naiss2025-23-525/results/star/index_chicken --readFilesIn ${f}_R1_unpaired.fastq.gz --readFilesCommand gunzip -c \
+    software/STAR/source/STAR --genomeDir /proj/naiss2025-23-525/results/star/index_chicken_IBV --readFilesIn ${f}_R1_unpaired.fastq.gz --readFilesCommand gunzip -c \
 		--runThreadN 8 --outFileNamePrefix results/star/mapped_reads/${GROUP_NAME}/${OUTPUT_NAME}_R1_unpaired_ --quantMode GeneCounts --outSAMtype BAM SortedByCoordinate
-    software/STAR/source/STAR --genomeDir /proj/naiss2025-23-525/results/star/index_chicken --readFilesIn ${f}_R2_unpaired.fastq.gz --readFilesCommand gunzip -c \
+    software/STAR/source/STAR --genomeDir /proj/naiss2025-23-525/results/star/index_chicken_IBV --readFilesIn ${f}_R2_unpaired.fastq.gz --readFilesCommand gunzip -c \
 		--runThreadN 8 --outFileNamePrefix results/star/mapped_reads/${GROUP_NAME}/${OUTPUT_NAME}_R2_unpaired_ --quantMode GeneCounts --outSAMtype BAM SortedByCoordinate
 done
 
