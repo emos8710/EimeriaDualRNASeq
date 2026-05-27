@@ -7,4 +7,4 @@
 #SBATCH --mail-user emma.ostlund@sva.se
 
 # Your commands
-bash EimeriaDualRNASeq/scripts/htseq/htseq_rev_run.sh results/star/mapped_reads/IBV
+bash EimeriaDualRNASeq/scripts/htseq/htseq_rev_run_gtf.sh results/star/mapped_reads/IBV
